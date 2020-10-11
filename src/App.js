@@ -16,7 +16,7 @@ function App() {
 
   const convertImageToText = async () => {
     setLoading(true);
-    const result = await Tesseract.recognize(imageUrl, "ara",
+     const result = await Tesseract.recognize(imageUrl, ["ara","eng","cat","chi_sim","chi_tra","hrv,","ell","heb","hin","ita","ita_old","kor","por","cpa","dan","deu","fra","jpn","rus","syr","tha","tur","vie"],
     );
 
     setText(result.data.text);
